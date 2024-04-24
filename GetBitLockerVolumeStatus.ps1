@@ -21,17 +21,6 @@ foreach ($line in $bde_status -split "`n") {
     }
 }
 
-# Check if the Conversion Status was found
-
-if (-not $encryptionType) {
-    Write-Output "Encryption type not found."
-}
-
-# Check if the Enryption Method was found
-if (-not $encryptionMethod) {
-    Write-Output "Encryption method not found."
-}
-
 # Combine and print out data for pre-remediation detection output
 $combined_data = "$encryptionType, $encryptionMethod"
 $combined_data
