@@ -1,8 +1,9 @@
 # Run the manage-bde -status command and store the output in $bde_status
 $bde_status = manage-bde -status C:
 
-# Initialize the variable to store the Conversion Status
-$conversionStatus = $null
+# Initialize the variables
+$encryptionType  = $null
+$encryptionMethod = $null
 
 # Split the output into lines and loop through each line
 foreach ($line in $bde_status -split "`n") {
